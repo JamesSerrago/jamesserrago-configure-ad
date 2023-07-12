@@ -57,8 +57,9 @@ Our next step will be to ensure connectivity between the client and the domain c
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<p> Next we will have to setup active directory on the domain controller. Once we are tabbed over to domain controller we should open the server manager from the start menu if it is not already open. Go to add roles and features and keep clicking next until you see a list of unchecked boxes and make sure to check active directory domain services. Then click add services and next until it allows you to install. Once this finishes, a small exclamtion mark should appear in the corner of the server manager and once clicked it should prompt you with a line that say promate server to domain controller. Once this is clicked you should get another window and make sure to click add new forest and name the domain (ex:mydomain.com). Then make anothe password for it and clicking next until it is installed.
+
+  Once this finishes it should disconnect you from the vm and we just need to reconnect. However since this is now a domain controller our username will be the name of our domain that we made up folloed by a / and then the user name we made up along with the password.
 </p>
 <br />
 
@@ -66,7 +67,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next up is to create a normal and admin user account id in active directory.
 </p>
 <br />
 
