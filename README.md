@@ -67,7 +67,9 @@ Our next step will be to ensure connectivity between the client and the domain c
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Next up is to create a normal and admin user account id in active directory.
+Next up is to create a admin user account id in active directory. To do this this we must first navigate through active directory and create two new oragnization unit. The first one will be called _EMPLOYEES and the second will be called _ADMINS. We are naming them like this just so they are easier to recognise. From here we can head to the _ADMINS we just made and create a new user by right cliking and selecting that option. You will be prompted with a box that will ask for account details such as the first and last name associated with the account, which we can use whatever we want to fill. Same goes for password but for this make sure to uncheck "user must change password at next login" so we dont have to reset it later.
+
+  In order to actuaslly make the account a admin account we will need to right click the account we made in the _ADMINS folder and go to properties. We can then go to the member of section and then add it the domain admins group. Once this is done we now log out of DC-1 and then log back in with our newly created admin account.
 </p>
 <br />
 
@@ -76,7 +78,7 @@ Next up is to create a normal and admin user account id in active directory.
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Next up we will be joining our client account to the domain controller
 </p>
 <br />
 
