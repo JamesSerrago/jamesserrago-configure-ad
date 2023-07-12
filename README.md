@@ -78,7 +78,7 @@ Next up is to create a admin user account id in active directory. To do this thi
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Next up we will be joining our client account to the domain controller. So we first need to get DC-1's private IP address from the azure vm menu and copy that over to the dns servers menu of Client-1. Make sure to change it to custom and add the IP address you got from the domain controller into the dns server section. After doing this we wil be restarting client-1 from the azure menu in order to flush the dns cache. After it has restarted we now login using the original account we made and not the admin account we just made. Once logged in we can right click the start menu and go to settings. Go to rename this pc and then change. Select domain and type in the name of your domain, in our case it is mydomain.com. A domain cahge prompt should appear and this is where we will now login using the admin account we had just created. Make sure to put the name of your domain in front of the admin accounts name (ex:mydomain.com/adminaccount). The computer should now restart and be connected to the domain controller.
+Next up we will be joining our client account to the domain controller. So we first need to get DC-1's private IP address from the azure vm menu and copy that over to the dns servers menu of Client-1. Make sure to change it to custom and add the IP address you got from the domain controller into the dns server section. After doing this we wil be restarting client-1 from the azure menu in order to flush the dns cache. After it has restarted we now login using the original account we made and not the admin account we just made. Once logged in we can right click the start menu and go to settings. Go to rename this pc and then change. Select domain and type in the name of your domain, in our case it is mydomain.com. A domain change prompt should appear and this is where we will now login using the admin account we had just created. Make sure to put the name of your domain in front of the admin accounts name (ex:mydomain.com/adminaccount). The computer should now restart and be connected to the domain controller.
   
 </p>
 <br />
@@ -87,7 +87,8 @@ Next up we will be joining our client account to the domain controller. So we fi
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-<p>Next
+<p>
+  Next we will be setting up the ability to remote desktop to non-administrative accounts on Client-1. So first we will have to be tabbed on Client-1 and right click the start menu and go to system. Go to remote desktop and then user accounts. This will bring up a window that allows us to allow any user to be able to do this. Instead of having to add every indidvidual user though, we can add a group with those permissions. For this we will use domain users to give everyone access.
 </p>
 <br />
 
@@ -96,7 +97,7 @@ Next up we will be joining our client account to the domain controller. So we fi
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Finally we can test a bunch of users and see if they can log in. So first we should go back to DC-1 and be logged in as our admin account. We should then search for powershell ISE and run it. Once oen we can create a new file and then copy and paste the following script into it.  
 </p>
 <br />
 
