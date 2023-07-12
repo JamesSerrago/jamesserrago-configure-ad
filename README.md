@@ -78,7 +78,16 @@ Next up is to create a admin user account id in active directory. To do this thi
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Next up we will be joining our client account to the domain controller
+Next up we will be joining our client account to the domain controller. So we first need to get DC-1's private IP address from the azure vm menu and copy that over to the dns servers menu of Client-1. Make sure to change it to custom and add the IP address you got from the domain controller into the dns server section. After doing this we wil be restarting client-1 from the azure menu in order to flush the dns cache. After it has restarted we now login using the original account we made and not the admin account we just made. Once logged in we can right click the start menu and go to settings. Go to rename this pc and then change. Select domain and type in the name of your domain, in our case it is mydomain.com. A domain cahge prompt should appear and this is where we will now login using the admin account we had just created. Make sure to put the name of your domain in front of the admin accounts name (ex:mydomain.com/adminaccount). The computer should now restart and be connected to the domain controller.
+  
+</p>
+<br />
+
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>Next
 </p>
 <br />
 
