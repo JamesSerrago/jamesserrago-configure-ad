@@ -97,7 +97,9 @@ Next up we will be joining our client account to the domain controller. So we fi
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Finally we can test a bunch of users and see if they can log in. So first we should go back to DC-1 and be logged in as our admin account. We should then search for powershell ISE and run it. Once oen we can create a new file and then copy and paste the following script into it.  
+Finally we can test a bunch of users and see if they can log in. So first we should go back to DC-1 and be logged in as our admin account. We should then search for powershell ISE and run it as a adminstrator. Once open we can create a new file and then copy and paste the following script into it. https://github.com/JamesSerrago/Generate-Names-Create-Users.ps1/tree/main 
+
+  Once this has been run you should see accounts being created. You can now go to Active Directory Users and Accounts and pick a user. Remember their username and tab back over to Client-1. We can now log out and back in as this new user. The password should be Password1 by default.
 </p>
 <br />
 
